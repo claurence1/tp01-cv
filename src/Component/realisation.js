@@ -1,17 +1,24 @@
-import { Card, Carousel, Image } from 'grommet';
+import { Box, Carousel, Image, Text } from 'grommet';
 import React from 'react';
 import data from "../Ressources/resumeData";
 
 const Realisation = () => {
   return (
-      <Card height="medium" width="large" margin="0 auto" background="light-1">
-        <Carousel  fill>
+      <Box height="medium" justify="center" width="large" margin="0 auto" background="light-1">
+        <Carousel fill>
         {imageProjets}
         </Carousel>
-      </Card>
+      </Box>
   );
 }
 
-const imageProjets = data.realisation.projects.map((projet) => <Image fit="cover" src={projet.image} />);
+const styleImage = {
+    height:'100px'
+};
+
+const imageProjets = data.realisation.projects.map((projet) => <Box>
+    <Image style={styleImage} src={projet.image} />
+    <Text> {projet.description}</Text>
+</Box>);
 
 export default Realisation;

@@ -1,5 +1,4 @@
 import {Avatar, Nav, Button} from 'grommet';
-import { Home } from 'grommet-icons'
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Accueil from './accueil';
@@ -34,7 +33,8 @@ const Menu = () => {
 }
 
 const styleButton = {
-    border:'hidden'};
+    border:'hidden'
+};
 
 
 export default Menu;

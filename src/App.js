@@ -9,7 +9,7 @@ class App extends Component {
     render() {
         return (
             <Grommet full>
-                <Box fill>
+                <Box>
                 <Menu/>
                 <PiedDePage/>
                 </Box>
