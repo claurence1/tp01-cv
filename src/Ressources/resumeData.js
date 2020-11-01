@@ -37,5 +37,12 @@ export default {
         "url": "http://www.shadowcreek.com/"
       }
     ]
+  },
+  "logo":{
+    "JS": "javascript.png",
+    "HTML" : "html.png",
+    "Java" : "java.png",
+    "Angular" : "angular.png",
+    "CSS"  : "css.png"
   }
 }

@@ -1,50 +1,24 @@
-import {Box, Distribution, Image, Text, Card} from 'grommet';
-import React, {useState} from 'react';
-import data from "../Ressources/resumeData";
+import React from "react";
+import {Image, Box, Text} from "grommet";
 
-const Competence = ({ type }) => {
-
-    const [choice, setChoice] = useState('Loisir');
-
-    const handleFocus = () => {
-        setChoice(choice === 'Loisir' ? 'Techno' : 'Loisir')
-    };
+const Competence = ({ logo, visible, value, event }) => {
 
     return (
-        <Card className="competence">
-            {type === 'Loisir' && (
-                <Distribution
-                    values={[
-                        {value: 40,  label: 'Java', color: '#FFCA58'},
-                        {value: 30, label: 'HTML', color: 'brand'},
-                        {value: 20, label: 'JavaScript', color: 'graph-0'},
-                        {value: 10, label: 'Angular', color: '#318ce7'},
-                        {value: 5, label: 'CSS', color: 'brand'},
-                    ]}>
-                    {value => (
-                        <Box pad="small" background={value.color} fill>
-                            <Text onFocus={handleFocus} size="large">{value.label}</Text>
-                        </Box>
-                    )}
-                </Distribution>
+        <Box onClick={event}>
+            {visible === 'true' && (
+                <Text size="large">{value}</Text>
             )}
-            {type === 'Techno' && (
-                <Distribution
-                    values={[
-                        {value: 40, label: 'Golf', color: '#FFCA58'},
-                        {value: 30, label: 'Tennis', color: 'brand'},
-                        {value: 20, label: 'Jeux-vidéo', color: 'graph-0'},
-                        {value: 10, label: 'Lecture', color: '#318ce7'},
-                        {value: 5, label: 'Cinéma', color: 'brand'},
-                    ]}>
-                    {value => (
-                        <Box pad="small" background={value.color} fill>
-                            <Text size="large">{value.label}</Text>
-                        </Box>
-                    )}
-                </Distribution>
+            {visible === 'false' && (
+                <Image style={styleLogo} src={logo} Hidden={visible}/>
             )}
-        </Card>
+        </Box>
     );
 }
-export default Competence;
+
+const styleLogo = {
+    height:'40px',
+    width:'40px'
+};
+
+export default Competence
+

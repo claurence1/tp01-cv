@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Button, Box} from "grommet";
-import Competence from "./competence";
+import TypeCompetence from "./typeCompetence";
 
 const Talent = () => {
     const [choice, setChoice] = useState('Loisir');
@@ -11,7 +11,7 @@ const Talent = () => {
 
     return (
         <Box >
-            <Competence type={choice}/>
+            <TypeCompetence type={choice}/>
             <Button style={styleButton} size="small" margin="small" primary onClick={handleClick}>{choice}</Button>
         </Box>
     );
