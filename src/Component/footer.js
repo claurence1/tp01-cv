@@ -1,15 +1,18 @@
 import React from "react";
 import {Image, Footer, Text, Anchor} from "grommet";
+import { Facebook, Linkedin, Instagram, Github } from "grommet-icons"
 import data from "../Ressources/resumeData";
 
 const PiedDePage = () => {
 
-    var reseauxSociaux = data.main.social.map((reseau) => <a href={reseau.url}><Image alt={reseau.nom} src={reseau.className} /></a>);
     return (
-        <Footer className="foot" background="brand" position="fixed" bottom="0">
+        <Footer className="foot" background="#318ce7" position="fixed" bottom="0">
             <Text>Copyright</Text>
             <Anchor label="About" />
-              {reseauxSociaux}
+            <a href="https://www.facebook.com/laurence.camille"><Facebook /></a>
+            <a href="https://www.linkedin.com/in/laurence.camille/"><Linkedin/></a>
+            <a href="https://www.instagram.com/laurence.camille/"><Instagram/></a>
+            <a href="http://github.com/laurence.camille"><Github/></a>
         </Footer>
     );
 }

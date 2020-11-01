@@ -1,11 +1,10 @@
 import React from 'react';
 import data from "../Ressources/resumeData";
-
+import {Box} from 'grommet';
 
 const Accueil = () => {
   return (
-      <section id="about">
-        <div className="row">
+      <Box className="box-accueil">
           <div>
             <img src={image} alt="Photo profil Camille" />
           </div>
@@ -25,16 +24,12 @@ const Accueil = () => {
                   <span>{email}</span>
                 </p>
               </div>
-              <div className="columns download">
                 <p>
                   <a href={cv} className="button"><i className="fa fa-download"></i>Télécharger mon CV</a>
                 </p>
-              </div>
             </div>
           </div>
-        </div>
-
-      </section>
+      </Box>
   );
 }
 

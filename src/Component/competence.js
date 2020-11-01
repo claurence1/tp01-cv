@@ -1,18 +1,41 @@
-import {Box, Distribution, Image, Text} from 'grommet';
-import React from 'react';
+import {Box, Distribution, Image, Text, Card} from 'grommet';
+import React, {useState} from 'react';
 import data from "../Ressources/resumeData";
 
 const Competence = ({ type }) => {
+
+    const [choice, setChoice] = useState('Loisir');
+
+    const handleFocus = () => {
+        setChoice(choice === 'Loisir' ? 'Techno' : 'Loisir')
+    };
+
     return (
-        <Box className="competence">
+        <Card className="competence">
             {type === 'Loisir' && (
                 <Distribution
                     values={[
-                        {value: 50,  label: 'test12', color: 'light-3'},
-                        {value: 30, label: 'test02', color: 'brand'},
-                        {value: 20, label: 'test03', color: 'graph-0'},
-                        {value: 10, label: 'test04', color: 'light-3'},
-                        {value: 5, label: 'test05', color: 'brand'},
+                        {value: 40,  label: 'Java', color: '#FFCA58'},
+                        {value: 30, label: 'HTML', color: 'brand'},
+                        {value: 20, label: 'JavaScript', color: 'graph-0'},
+                        {value: 10, label: 'Angular', color: '#318ce7'},
+                        {value: 5, label: 'CSS', color: 'brand'},
+                    ]}>
+                    {value => (
+                        <Box pad="small" background={value.color} fill>
+                            <Text onFocus={handleFocus} size="large">{value.label}</Text>
+                        </Box>
+                    )}
+                </Distribution>
+            )}
+            {type === 'Techno' && (
+                <Distribution
+                    values={[
+                        {value: 40, label: 'Golf', color: '#FFCA58'},
+                        {value: 30, label: 'Tennis', color: 'brand'},
+                        {value: 20, label: 'Jeux-vidéo', color: 'graph-0'},
+                        {value: 10, label: 'Lecture', color: '#318ce7'},
+                        {value: 5, label: 'Cinéma', color: 'brand'},
                     ]}>
                     {value => (
                         <Box pad="small" background={value.color} fill>
@@ -21,33 +44,7 @@ const Competence = ({ type }) => {
                     )}
                 </Distribution>
             )}
-            {type === 'Techno' && (
-                <Distribution
-                    values={[
-                        {value: 50, color: 'light-3'},
-                        {value: 30, color: 'brand'},
-                        {value: 20, color: 'graph-0'},
-                        {value: 10, color: 'light-3'},
-                        {value: 5, color: 'brand'},
-                    ]}>
-                    {value => (
-                        <Box pad="small" background={value.color} fill>
-                            <Text size="large">{value.value}</Text>
-                        </Box>
-                    )}
-                </Distribution>
-            )}
-        </Box>
+        </Card>
     );
-
 }
-
-const competencesLoisir = data.resume.skills.map((skill) => <Image fit="cover" src={skill.image} />);
-
-const competenceLoisir1 = data.resume;
-const competenceLoisir2 = data.main;
-const competenceLoisir3 = data.main;
-const competenceLoisir4 = data.main;
-const competenceLoisir5 = data.main;
-
 export default Competence;

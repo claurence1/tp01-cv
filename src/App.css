@@ -18,13 +18,23 @@ body {
 }
 
 .foot {
-  display : table-row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   height: 50px;
 }
 
+.bouton-menu{
+  border : hidden;
+}
+
+.box-accueil{
+  margin: 0 auto;
+  text-align: center;
+}
+
 .competence{
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

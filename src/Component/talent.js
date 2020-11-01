@@ -12,10 +12,14 @@ const Talent = () => {
     return (
         <Box >
             <Competence type={choice}/>
-            <Button className="" size="small" margin="small" primary onClick={handleClick}>{choice}</Button>
+            <Button style={styleButton} size="small" margin="small" primary onClick={handleClick}>{choice}</Button>
         </Box>
     );
 }
+
+const styleButton = {
+    textAlign:'center',
+    backgroundColor:'#D63032'};
 
 export default Talent
 

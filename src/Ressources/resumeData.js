@@ -19,7 +19,7 @@ export default {
       {
         "nom": "facebook",
         "url": "https://www.facebook.com/laurence.camille",
-        "className": "fa fa-facebook"
+        "className": "facebook-icon.png"
       },
       {
         "nom": "linkedin",
@@ -108,18 +108,6 @@ export default {
         "description": "La beauté de ce monument et la conception classique du parcours de golf se dressent aujourd'hui, prêts à être partagés et appréciés par tous ceux qui honorent et respectent le jeu et recherchent ses défis au plus haut niveau.",
         "image": "shadowCreek.jpg",
         "url": "http://www.shadowcreek.com/"
-      }
-    ]
-  },
-  "testimonials": {
-    "testimonials": [
-      {
-        "text": "Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
-        "user": "Kareem Abdul Jabbar"
-      },
-      {
-        "text": "That Sonny Sangha must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
-        "user": "Steve Wozniak... impersonator"
       }
     ]
   }
