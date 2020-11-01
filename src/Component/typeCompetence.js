@@ -1,14 +1,14 @@
 import {Box, Distribution, Text, Card} from 'grommet';
 import React, {useState} from 'react';
-import data from "../Ressources/resumeData";
+import data from "../Ressources/donnéeCV";
 import Competence from "./competence";
 
 const TypeCompetence = ({ type }) => {
 
-    const [visible, setVisible] = useState('true');
+    const [visible, setVisible] = useState(true);
 
     const handleClick = ({}) => {
-        setVisible(visible === 'true' ? 'false' : 'true')
+        setVisible(visible !== true)
     };
 
     return (

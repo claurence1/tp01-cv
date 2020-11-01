@@ -1,7 +1,6 @@
 import React from "react";
-import {Image, Footer, Text, Anchor} from "grommet";
+import { Footer, Text, Anchor} from "grommet";
 import { Facebook, Linkedin, Instagram, Github } from "grommet-icons"
-import data from "../Ressources/resumeData";
 
 const PiedDePage = () => {
 

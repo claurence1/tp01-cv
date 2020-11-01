@@ -1,5 +1,5 @@
 import React from 'react';
-import data from "../Ressources/resumeData";
+import data from "../Ressources/donnéeCV";
 import {Box} from 'grommet';
 
 const Accueil = () => {

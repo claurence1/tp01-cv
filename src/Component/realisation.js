@@ -1,6 +1,6 @@
 import { Box, Carousel, Image, Text } from 'grommet';
 import React from 'react';
-import data from "../Ressources/resumeData";
+import data from "../Ressources/donnéeCV";
 
 const Realisation = () => {
   return (
