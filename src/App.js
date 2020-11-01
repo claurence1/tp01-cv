@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Menu from './Component/menu';
+import PiedDePage from "./Component/footer";
 
 class App extends Component {
 
@@ -8,6 +9,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Menu/>
+                <PiedDePage/>
             </div>
         );
     }

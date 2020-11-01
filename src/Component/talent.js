@@ -3,16 +3,16 @@ import {Button, Box} from "grommet";
 import Competence from "./competence";
 
 const Talent = () => {
-    const [choice, setChoice] = useState('loisir');
+    const [choice, setChoice] = useState('Loisir');
 
     const handleClick = () => {
-        setChoice(choice === 'loisir' ? 'techno' : 'loisir')
+        setChoice(choice === 'Loisir' ? 'Techno' : 'Loisir')
     };
 
     return (
-        <Box>
-            <Button onClick={handleClick}>{choice}</Button>
+        <Box >
             <Competence type={choice}/>
+            <Button className="" size="small" margin="small" primary onClick={handleClick}>{choice}</Button>
         </Box>
     );
 }

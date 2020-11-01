@@ -14,8 +14,7 @@ export default {
       "pays": "FR",
       "codePostal": "31200"
     },
-    "siteWeb": "http://www.getfluence.com",
-    "cv": "http://www.getfluence.com",
+    "cv": "CV-Camille.pdf",
     "social": [
       {
         "nom": "facebook",

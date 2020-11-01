@@ -1,7 +1,6 @@
-import { Avatar, Nav, Button } from 'grommet';
-import React, { Component } from 'react';
+import {Avatar, Nav, Button, Footer} from 'grommet';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Cv from './cv';
 import Accueil from './accueil';
 import Talent from './talent';
 import Realisation from "./realisation";
@@ -28,6 +27,7 @@ const Menu = () => {
                     <Talent />
                 </Route>
             </Switch>
+
         </Router>);
 
 }
